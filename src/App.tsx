@@ -881,7 +881,7 @@ const About = () => {
                   <div>
                     <p className="text-xs font-black tracking-[0.2em] text-slate-400 uppercase mb-1">Formação Acadêmica</p>
                     <p className="text-lg text-slate-800 font-bold leading-tight">
-                      Centro Universitário <span className="text-rainbow-blue">Celso Lisboa</span>
+                      Centro Universitário <span className="text-rainbow-blue">Celso Lisboa - RJ</span>
                     </p>
                   </div>
                 </div>
