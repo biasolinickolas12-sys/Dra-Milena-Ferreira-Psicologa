@@ -4,6 +4,16 @@ import { ErrorBoundary } from 'react-error-boundary';
 import App from './App.tsx';
 import './index.css';
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+// Force scroll to top on page load/reload before React mounts
+window.scrollTo(0, 0);
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 const Fallback = ({ error }: { error: Error }) => (
   <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 text-slate-800 p-6 text-center">
     <div className="bg-white p-8 rounded-2xl shadow-xl max-w-lg w-full">

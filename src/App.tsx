@@ -1917,6 +1917,7 @@ const ScrollToTop = () => {
 };
 
 export default function App() {
+
   return (
     <div className="min-h-screen selection:bg-rainbow-indigo selection:text-white relative bg-white overflow-x-hidden bg-pattern">
       <FloatingBackground />
