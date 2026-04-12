@@ -79,7 +79,7 @@ const FloatingBackground = () => {
   })), []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white">
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white hidden md:block">
       {elements.map((el, i) => (
         <motion.div
           key={i}
@@ -134,7 +134,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -147,7 +147,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 bg-rainbow-violet/15 backdrop-blur-lg border-b border-white/20 ${scrolled ? 'py-3 shadow-lg' : 'py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 bg-rainbow-violet/15 backdrop-blur-sm md:backdrop-blur-lg border-b border-white/20 ${scrolled ? 'py-3 shadow-lg' : 'py-6'}`}>
       {/* Top Rainbow Line */}
       <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet" />
       
@@ -470,8 +470,8 @@ const Expertise = () => {
   return (
     <section id="especialidades" className="py-32 bg-transparent overflow-hidden relative">
       {/* Decorative Blobs */}
-      <div className="absolute -left-40 top-20 w-80 h-80 bg-rainbow-blue/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute -right-40 bottom-20 w-80 h-80 bg-rainbow-indigo/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute -left-40 top-20 w-80 h-80 bg-rainbow-blue/5 rounded-full blur-3xl -z-10 hidden md:block" />
+      <div className="absolute -right-40 bottom-20 w-80 h-80 bg-rainbow-indigo/5 rounded-full blur-3xl -z-10 hidden md:block" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div 
@@ -796,10 +796,10 @@ const About = () => {
   const [showServiceModal, setShowServiceModal] = useState(false);
 
   return (
-    <section id="specialist" className="py-32 bg-slate-50/50 backdrop-blur-sm overflow-hidden relative">
+    <section id="specialist" className="py-32 bg-slate-50/50 backdrop-blur-none md:backdrop-blur-sm overflow-hidden relative">
       {/* Decorative Blobs */}
-      <div className="absolute -right-40 top-0 w-96 h-96 bg-rainbow-yellow/5 rounded-full blur-3xl -z-10" />
-      <div className="absolute -left-40 bottom-0 w-96 h-96 bg-rainbow-green/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute -right-40 top-0 w-96 h-96 bg-rainbow-yellow/5 rounded-full blur-3xl -z-10 hidden md:block" />
+      <div className="absolute -left-40 bottom-0 w-96 h-96 bg-rainbow-green/5 rounded-full blur-3xl -z-10 hidden md:block" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -1404,7 +1404,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
           x: [0, 100, 0]
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute -right-20 top-1/2 w-96 h-96 bg-rainbow-red/10 rounded-full blur-[100px] -z-10" 
+        className="absolute -right-20 top-1/2 w-96 h-96 bg-rainbow-red/10 rounded-full blur-[100px] -z-10 hidden md:block" 
       />
       <motion.div 
         animate={{ 
@@ -1413,7 +1413,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
           x: [0, -100, 0]
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute -left-20 top-1/4 w-80 h-80 bg-rainbow-indigo/10 rounded-full blur-[100px] -z-10" 
+        className="absolute -left-20 top-1/4 w-80 h-80 bg-rainbow-indigo/10 rounded-full blur-[100px] -z-10 hidden md:block" 
       />
       
       <div className="max-w-4xl mx-auto px-6">
@@ -1923,9 +1923,9 @@ export default function App() {
       <FloatingBackground />
       
       {/* Floating Decorative Blobs on Edges */}
-      <div className="fixed -left-20 top-1/4 w-40 h-40 bg-rainbow-blue/5 rounded-full blur-3xl z-0" />
-      <div className="fixed -right-20 top-2/3 w-60 h-60 bg-rainbow-indigo/5 rounded-full blur-3xl z-0" />
-      <div className="fixed -left-10 bottom-10 w-32 h-32 bg-rainbow-yellow/5 rounded-full blur-3xl z-0" />
+      <div className="fixed -left-20 top-1/4 w-40 h-40 bg-rainbow-blue/5 rounded-full blur-3xl z-0 hidden md:block" />
+      <div className="fixed -right-20 top-2/3 w-60 h-60 bg-rainbow-indigo/5 rounded-full blur-3xl z-0 hidden md:block" />
+      <div className="fixed -left-10 bottom-10 w-32 h-32 bg-rainbow-yellow/5 rounded-full blur-3xl z-0 hidden md:block" />
 
       <Navbar />
       <main className="relative z-10">
