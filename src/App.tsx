@@ -41,7 +41,7 @@ import {
 
 // --- Components ---
 
-const FloatingBackground = () => {
+const FloatingBackground = ({ className = "fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white hidden md:block" }: { className?: string }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   
   useEffect(() => {
@@ -81,7 +81,7 @@ const FloatingBackground = () => {
   })), []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-white hidden md:block">
+    <div className={className}>
       {elements.map((el, i) => (
         <motion.div
           key={i}
@@ -1821,7 +1821,7 @@ const ebooksData = [
     ],
     link: "https://wa.me/5521982694085?text=Ol%C3%A1%20Dra.%20Milena%2C%20gostaria%20de%20comprar%20o%20e-book%20%22Recuperando%20o%20Tempo%20com%20Precis%C3%A3o%22.",
     image: "/Gemini_Generated_Image_8nbqmk8nbqmk8nbq.png",
-    price: "47",
+    price: "37,90",
     color: "from-rainbow-blue via-rainbow-violet to-rainbow-red",
     badgeColor: "bg-rainbow-yellow text-slate-900"
   },
@@ -1838,7 +1838,7 @@ const ebooksData = [
     ],
     link: "https://wa.me/5521982694085?text=Ol%C3%A1%20Dra.%20Milena%2C%20gostaria%20de%20comprar%20o%20e-book%20%22Decifrando%20o%20C%C3%B3digo%20Invis%C3%ADvel%22.",
     image: "/CAPA%20EBOOK%20TEA.png",
-    price: "47",
+    price: "37,90",
     color: "from-rainbow-green via-rainbow-blue to-rainbow-violet",
     badgeColor: "bg-rainbow-green text-slate-900"
   },
@@ -1855,7 +1855,7 @@ const ebooksData = [
     ],
     link: "https://wa.me/5521982694085?text=Ol%C3%A1%20Dra.%20Milena%2C%20gostaria%20de%20comprar%20o%20e-book%20%22Construindo%20o%20Amanh%C3%A3%22.",
     image: "/down%201.png",
-    price: "47",
+    price: "37,90",
     color: "from-rainbow-red via-rainbow-yellow to-rainbow-orange",
     badgeColor: "bg-rainbow-red text-white"
   }
@@ -1864,6 +1864,7 @@ const ebooksData = [
 const EbookSales = () => {
   return (
     <section id="ebook" className="py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <FloatingBackground className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-20 mix-blend-color-dodge hidden md:block" />
       {/* Decorative Blobs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rainbow-blue/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-rainbow-violet/20 rounded-full blur-[100px] pointer-events-none" />
