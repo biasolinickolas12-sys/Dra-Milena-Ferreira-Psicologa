@@ -1811,6 +1811,7 @@ const ebooksData = [
   {
     title: "Recuperando o Tempo com",
     titleHighlight: "Precisão",
+    tag: "ATRASOS NO DESENVOLVIMENTO",
     desc: "O Guia Estratégico para Identificar Lacunas no Desenvolvimento e Mudar a Trajetória do seu Filho.",
     features: [
       "Estratégias práticas baseadas na Ciência ABA",
@@ -1827,6 +1828,7 @@ const ebooksData = [
   {
     title: "Decifrando o Código",
     titleHighlight: "Invisível",
+    tag: "TEA",
     desc: "Tudo o que você precisa saber para compreender o universo do TEA e ajudar seu filho(a) a se desenvolver de forma saudável.",
     features: [
       "O que é o TEA e como identificar na prática",
@@ -1839,6 +1841,23 @@ const ebooksData = [
     price: "47",
     color: "from-rainbow-green via-rainbow-blue to-rainbow-violet",
     badgeColor: "bg-rainbow-green text-slate-900"
+  },
+  {
+    title: "Construindo o",
+    titleHighlight: "Amanhã",
+    tag: "SÍNDROME DE DOWN",
+    desc: "Um material completo dedicado ao planejamento estruturado e afeto para moldar um futuro promissor e autônomo no desenvolvimento infantil.",
+    features: [
+      "Planejamento de rotinas saudáveis e eficazes",
+      "Ferramentas práticas para o dia a dia",
+      "Fortalecimento de vínculos e inteligência emocional",
+      "Acolhimento e direcionamento pautado na ciência"
+    ],
+    file: "/EBOOK%20-%20Construindo%20o%20Amanhã.pdf",
+    image: "/down%201.png",
+    price: "47",
+    color: "from-rainbow-red via-rainbow-yellow to-rainbow-orange",
+    badgeColor: "bg-rainbow-red text-white"
   }
 ];
 
@@ -1864,8 +1883,11 @@ const EbookSales = () => {
                 <span className="text-rainbow-yellow font-black tracking-[0.3em] uppercase text-sm mb-4 flex items-center gap-2">
                   <BookOpen size={18} /> LANÇAMENTO
                 </span>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight mb-6">
-                  {ebook.title} <span className="text-gradient-rainbow">{ebook.titleHighlight}</span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight mb-6 flex flex-wrap items-center gap-4">
+                  <span>{ebook.title} <span className="text-gradient-rainbow">{ebook.titleHighlight}</span></span>
+                  <span className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-white/20 bg-white/10 text-white shadow-sm backdrop-blur-sm self-start mt-2">
+                    {ebook.tag}
+                  </span>
                 </h2>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow to-rainbow-blue rounded-full mb-8" />
                 
