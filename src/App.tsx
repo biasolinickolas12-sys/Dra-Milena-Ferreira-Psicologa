@@ -1819,7 +1819,7 @@ const ebooksData = [
       "Passo a passo para estimular a comunicação",
       "Atividades para o dia a dia em casa"
     ],
-    file: "/Recuperando%20o%20Tempo%20com%20Precisão.pdf",
+    link: "https://wa.me/5521982694085?text=Ol%C3%A1%20Dra.%20Milena%2C%20gostaria%20de%20comprar%20o%20e-book%20%22Recuperando%20o%20Tempo%20com%20Precis%C3%A3o%22.",
     image: "/Gemini_Generated_Image_8nbqmk8nbqmk8nbq.png",
     price: "47",
     color: "from-rainbow-blue via-rainbow-violet to-rainbow-red",
@@ -1836,7 +1836,7 @@ const ebooksData = [
       "Manejo de comportamentos desafiadores",
       "Como promover autonomia e independência"
     ],
-    file: "/Decifrando%20o%20Cógigo%20Invisível%20%20(%20TEA%20).pdf",
+    link: "https://wa.me/5521982694085?text=Ol%C3%A1%20Dra.%20Milena%2C%20gostaria%20de%20comprar%20o%20e-book%20%22Decifrando%20o%20C%C3%B3digo%20Invis%C3%ADvel%22.",
     image: "/CAPA%20EBOOK%20TEA.png",
     price: "47",
     color: "from-rainbow-green via-rainbow-blue to-rainbow-violet",
@@ -1853,7 +1853,7 @@ const ebooksData = [
       "Fortalecimento de vínculos e inteligência emocional",
       "Acolhimento e direcionamento pautado na ciência"
     ],
-    file: "/EBOOK%20-%20Construindo%20o%20Amanhã.pdf",
+    link: "https://wa.me/5521982694085?text=Ol%C3%A1%20Dra.%20Milena%2C%20gostaria%20de%20comprar%20o%20e-book%20%22Construindo%20o%20Amanh%C3%A3%22.",
     image: "/down%201.png",
     price: "47",
     color: "from-rainbow-red via-rainbow-yellow to-rainbow-orange",
@@ -1907,7 +1907,7 @@ const EbookSales = () => {
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <motion.a 
-                  href={ebook.file} 
+                  href={ebook.link} 
                   target="_blank"
                   className={`bg-gradient-to-r ${ebook.color} text-white px-10 py-5 rounded-full font-black text-lg flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_10px_50px_rgba(77,150,255,0.5)] group relative overflow-hidden transition-all hover:scale-105 active:scale-95`}
                 >
