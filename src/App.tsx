@@ -1863,8 +1863,8 @@ const ebooksData = [
 
 const EbookSales = () => {
   return (
-    <section id="ebook" className="py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-      <FloatingBackground className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-20 mix-blend-color-dodge hidden md:block" />
+    <section id="ebook" className="py-32 relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-700 text-white">
+      <FloatingBackground className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-60" />
       {/* Decorative Blobs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rainbow-blue/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-rainbow-violet/20 rounded-full blur-[100px] pointer-events-none" />
