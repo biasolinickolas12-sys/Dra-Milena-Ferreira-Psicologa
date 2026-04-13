@@ -157,7 +157,7 @@ const Navbar = () => {
       {/* Bottom Rainbow Line */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet" />
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="w-full px-6 lg:px-12 xl:px-16 2xl:px-24">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img 
@@ -170,7 +170,7 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-10">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -223,7 +223,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-slate-900">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -238,7 +238,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white border-t border-slate-100 overflow-hidden"
+            className="lg:hidden bg-white border-t border-slate-100 overflow-hidden"
           >
             <div className="px-6 py-8 space-y-6">
               {navLinks.map((link, i) => (
