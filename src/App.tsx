@@ -144,6 +144,7 @@ const Navbar = () => {
     { name: 'SOBRE', href: '#specialist' },
     { name: 'PROPÓSITO', href: '#proposito' },
     { name: 'SERVIÇOS', href: '#especialidades' },
+    { name: 'E-BOOKS', href: '#ebook' },
     { name: 'FAQ', href: '#faq' },
     { name: 'REDES SOCIAIS', href: '#footer' },
   ];
