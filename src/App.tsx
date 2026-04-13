@@ -1807,99 +1807,132 @@ const FAQ = () => {
   );
 };
 
+const ebooksData = [
+  {
+    title: "Recuperando o Tempo com",
+    titleHighlight: "Precisão",
+    desc: "O Guia Estratégico para Identificar Lacunas no Desenvolvimento e Mudar a Trajetória do seu Filho.",
+    features: [
+      "Estratégias práticas baseadas na Ciência ABA",
+      "Como identificar os primeiros sinais de atraso",
+      "Passo a passo para estimular a comunicação",
+      "Atividades para o dia a dia em casa"
+    ],
+    file: "/Recuperando%20o%20Tempo%20com%20Precisão.pdf",
+    image: "/Gemini_Generated_Image_8nbqmk8nbqmk8nbq.png",
+    price: "47",
+    color: "from-rainbow-blue via-rainbow-violet to-rainbow-red",
+    badgeColor: "bg-rainbow-yellow text-slate-900"
+  },
+  {
+    title: "Decifrando o Código",
+    titleHighlight: "Invisível",
+    desc: "Tudo o que você precisa saber para compreender o universo do TEA e ajudar seu filho(a) a se desenvolver de forma saudável.",
+    features: [
+      "O que é o TEA e como identificar na prática",
+      "Estratégias para comunicação efetiva",
+      "Manejo de comportamentos desafiadores",
+      "Como promover autonomia e independência"
+    ],
+    file: "/Decifrando%20o%20Cógigo%20Invisível%20%20(%20TEA%20).pdf",
+    image: "/CAPA%20EBOOK%20TEA.png",
+    price: "47",
+    color: "from-rainbow-green via-rainbow-blue to-rainbow-violet",
+    badgeColor: "bg-rainbow-green text-slate-900"
+  }
+];
+
 const EbookSales = () => {
   return (
     <section id="ebook" className="py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 text-white">
       {/* Decorative Blobs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rainbow-blue/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-rainbow-violet/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-rainbow-yellow/5 rounded-full blur-[120px] pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col space-y-8"
-          >
-            <div>
-              <span className="text-rainbow-yellow font-black tracking-[0.3em] uppercase text-sm mb-4 flex items-center gap-2">
-                <BookOpen size={18} /> LANÇAMENTO
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight mb-6">
-                Recuperando o Tempo com <span className="text-gradient-rainbow">Precisão</span>
-              </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow to-rainbow-blue rounded-full mb-8" />
-              
-              <p className="text-xl text-slate-300 leading-relaxed font-medium mb-6">
-                O Guia Estratégico para Identificar Lacunas no Desenvolvimento e Mudar a Trajetória do seu Filho.
-              </p>
-              
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Estratégias práticas baseadas na Ciência ABA",
-                  "Como identificar os primeiros sinais de atraso",
-                  "Passo a passo para estimular a comunicação",
-                  "Atividades para o dia a dia em casa"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <CheckCircle2 className="text-rainbow-green shrink-0 mt-1.5" size={20} />
-                    <span className="font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6">
-              <motion.a 
-                href="/Recuperando%20o%20Tempo%20com%20Precisão.pdf" 
-                target="_blank"
-                className="bg-gradient-to-r from-rainbow-blue via-rainbow-violet to-rainbow-red text-white px-10 py-5 rounded-full font-black text-lg flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_10px_50px_rgba(77,150,255,0.5)] group relative overflow-hidden transition-all hover:scale-105 active:scale-95"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  COMPRAR E-BOOK AGORA
-                  <ShoppingCart size={20} />
-                </span>
-                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </motion.a>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
-            whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", duration: 1.5 }}
-            className="relative perspective-1000"
-          >
-            <div className="relative w-full max-w-md mx-auto aspect-[2/3] rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] overflow-hidden transform-gpu group border-4 border-slate-700/50">
-              <img 
-                src="/Gemini_Generated_Image_8nbqmk8nbqmk8nbq.png" 
-                alt="Capa do Ebook Recuperando o Tempo com Precisão" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent pointer-events-none" />
-              
-              {/* Shine effect over the book cover */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-1000 pointer-events-none" />
-            </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 space-y-32">
+        {ebooksData.map((ebook, index) => (
+          <div key={index} className="grid lg:grid-cols-2 gap-16 items-center">
             
-            {/* Price Badge */}
             <motion.div 
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5, type: "spring" }}
-              className="absolute -top-6 -right-2 md:-right-8 bg-rainbow-yellow text-slate-900 w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-2xl rotate-12 border-4 border-slate-900 z-20"
+              className={`flex flex-col space-y-8 ${index % 2 !== 0 ? 'lg:order-2' : ''}`}
             >
-              <span className="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Por apenas</span>
-              <span className="text-3xl font-black">R$ 47</span>
-              <span className="text-[10px] font-bold opacity-80 mt-1 text-center leading-tight">oferta de<br/>lançamento</span>
-            </motion.div>
-          </motion.div>
+              <div>
+                <span className="text-rainbow-yellow font-black tracking-[0.3em] uppercase text-sm mb-4 flex items-center gap-2">
+                  <BookOpen size={18} /> LANÇAMENTO
+                </span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight mb-6">
+                  {ebook.title} <span className="text-gradient-rainbow">{ebook.titleHighlight}</span>
+                </h2>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow to-rainbow-blue rounded-full mb-8" />
+                
+                <p className="text-xl text-slate-300 leading-relaxed font-medium mb-6">
+                  {ebook.desc}
+                </p>
+                
+                <ul className="space-y-4 mb-8">
+                  {ebook.features.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-slate-300">
+                      <CheckCircle2 className="text-rainbow-green shrink-0 mt-1.5" size={20} />
+                      <span className="font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-        </div>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <motion.a 
+                  href={ebook.file} 
+                  target="_blank"
+                  className={`bg-gradient-to-r ${ebook.color} text-white px-10 py-5 rounded-full font-black text-lg flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_10px_50px_rgba(77,150,255,0.5)] group relative overflow-hidden transition-all hover:scale-105 active:scale-95`}
+                >
+                  <span className="relative z-10 flex items-center gap-3">
+                    COMPRAR E-BOOK AGORA
+                    <ShoppingCart size={20} />
+                  </span>
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </motion.a>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8, rotateY: index % 2 === 0 ? 30 : -30 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1.5 }}
+              className={`relative perspective-1000 ${index % 2 !== 0 ? 'lg:order-1' : ''}`}
+            >
+              <div className="relative w-full max-w-md mx-auto aspect-[2/3] rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] overflow-hidden transform-gpu group border-4 border-slate-700/50">
+                <img 
+                  src={ebook.image} 
+                  alt={`Capa do Ebook ${ebook.title} ${ebook.titleHighlight}`} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent pointer-events-none" />
+                
+                {/* Shine effect over the book cover */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-1000 pointer-events-none" />
+              </div>
+              
+              {/* Price Badge */}
+              <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, type: "spring" }}
+                className={`absolute -top-6 -right-2 md:-right-8 ${ebook.badgeColor} w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-slate-900 z-20 ${index % 2 === 0 ? 'rotate-12' : '-rotate-12'}`}
+              >
+                <span className="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Por apenas</span>
+                <span className="text-3xl font-black">R$ {ebook.price}</span>
+                <span className="text-[10px] font-bold opacity-80 mt-1 text-center leading-tight">oferta de<br/>lançamento</span>
+              </motion.div>
+            </motion.div>
+
+          </div>
+        ))}
       </div>
     </section>
   );
