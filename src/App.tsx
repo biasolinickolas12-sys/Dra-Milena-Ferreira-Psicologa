@@ -1434,7 +1434,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
           {/* Rainbow Border Glow - Enhanced */}
           <div className="absolute -inset-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet rounded-[3.2rem] blur-xl opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse" />
           
-          <div className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-20 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-white/60 min-h-[550px] flex flex-col justify-center">
+          <div className="bg-gradient-to-br from-indigo-50 via-violet-50 to-blue-50 backdrop-blur-2xl rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-20 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(99,102,241,0.25)] border border-indigo-100/80 min-h-[550px] flex flex-col justify-center">
             {/* Decorative Corner Shapes */}
             <motion.div 
               animate={{ rotate: 360, scale: [1, 1.2, 1] }}
