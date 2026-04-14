@@ -1467,7 +1467,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                   onClick={() => setHasStarted(true)}
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 40px -10px rgba(77, 150, 255, 0.4)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-rainbow mx-auto flex items-center gap-4 px-12 py-8 text-2xl shadow-2xl group"
+                  className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 hover:from-violet-500 hover:via-fuchsia-400 hover:to-pink-400 text-white mx-auto flex items-center gap-4 px-12 py-8 text-2xl shadow-[0_20px_60px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_25px_70px_-10px_rgba(168,85,247,0.8)] rounded-full font-black transition-all group"
                 >
                   <span className="font-black tracking-wider">INICIAR AVALIAÇÃO GRATUITA</span>
                   <ArrowRight size={28} className="group-hover:translate-x-2 transition-transform" />
@@ -1612,7 +1612,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                     boxShadow: ["0 20px 40px -10px rgba(79, 70, 229, 0.2)", "0 20px 40px -10px rgba(79, 70, 229, 0.5)", "0 20px 40px -10px rgba(79, 70, 229, 0.2)"] 
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="btn-rainbow w-full md:w-auto mx-auto flex items-center justify-center gap-3 md:gap-4 px-8 md:px-16 py-6 md:py-8 text-lg md:text-2xl shadow-2xl relative group overflow-hidden"
+                  className="bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:via-teal-300 hover:to-cyan-300 text-white w-full md:w-auto mx-auto flex items-center justify-center gap-3 md:gap-4 px-8 md:px-16 py-6 md:py-8 text-lg md:text-2xl shadow-[0_20px_60px_-10px_rgba(16,185,129,0.5)] hover:shadow-[0_25px_70px_-10px_rgba(16,185,129,0.7)] rounded-full font-black transition-all relative group overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                   <span className="relative z-10 font-black tracking-wider">FINALIZAR AGENDAMENTO</span>
