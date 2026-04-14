@@ -1469,7 +1469,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 hover:from-violet-500 hover:via-fuchsia-400 hover:to-pink-400 text-white mx-auto flex items-center gap-4 px-12 py-8 text-2xl shadow-[0_20px_60px_-10px_rgba(168,85,247,0.6)] hover:shadow-[0_25px_70px_-10px_rgba(168,85,247,0.8)] rounded-full font-black transition-all group"
                 >
-                  <span className="font-black tracking-wider">INICIAR AVALIAÇÃO GRATUITA</span>
+                  <span className="font-black tracking-wider">AGENDAR UMA CONSULTA</span>
                   <ArrowRight size={28} className="group-hover:translate-x-2 transition-transform" />
                 </motion.button>
               </div>
