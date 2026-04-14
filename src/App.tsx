@@ -1434,7 +1434,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
           {/* Rainbow Border Glow - Enhanced */}
           <div className="absolute -inset-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet rounded-[3.2rem] blur-xl opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse" />
           
-          <div className="bg-slate-800/18 backdrop-blur-2xl rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-20 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(30,41,59,0.4)] border border-slate-500/20 min-h-[550px] flex flex-col justify-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-20 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,23,42,0.6)] border border-slate-600/50 min-h-[550px] flex flex-col justify-center">
             {/* Decorative Corner Shapes */}
             <motion.div 
               animate={{ rotate: 360, scale: [1, 1.2, 1] }}
@@ -1457,10 +1457,10 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                 >
                   <Stethoscope size={48} />
                 </motion.div>
-                <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 tracking-tight md:tracking-tighter">
+                <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight md:tracking-tighter">
                   Triagem <span className="text-gradient-rainbow">Digital</span>
                 </h2>
-                <p className="text-xl md:text-2xl text-slate-600 mb-14 font-medium leading-relaxed max-w-2xl mx-auto">
+                <p className="text-xl md:text-2xl text-slate-300 mb-14 font-medium leading-relaxed max-w-2xl mx-auto">
                   Inicie seu atendimento respondendo a algumas perguntas rápidas para que possamos entender melhor as necessidades da sua criança.
                 </p>
                 <motion.button
@@ -1497,11 +1497,11 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                 <motion.h2 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="text-3xl font-black text-slate-900 tracking-tight"
+                  className="text-3xl font-black text-white tracking-tight"
                 >
                   Processando <span className="text-gradient-rainbow">Informações</span>
                 </motion.h2>
-                <p className="text-slate-500 mt-4 font-medium text-lg">Estamos preparando sua triagem personalizada para a Dra. Milena.</p>
+                <p className="text-slate-300 mt-4 font-medium text-lg">Estamos preparando sua triagem personalizada para a Dra. Milena.</p>
               </div>
             ) : !isFinished ? (
               <div className="relative z-10">
@@ -1520,7 +1520,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             onClick={handleBack}
-                            className="w-10 h-10 rounded-full bg-white border border-slate-100 flex items-center justify-center text-slate-400 hover:text-rainbow-indigo hover:border-rainbow-indigo transition-all shadow-sm"
+                            className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-slate-300 hover:text-rainbow-indigo hover:border-rainbow-indigo transition-all shadow-sm"
                             title="Voltar"
                           >
                             <ArrowLeft size={20} />
@@ -1533,7 +1533,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                       </div>
                       <div className="flex items-center gap-3">
                         <span className="text-xs font-bold text-slate-400">PROGRESSO</span>
-                        <div className="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="w-32 h-2 bg-slate-600 rounded-full overflow-hidden">
                           <motion.div 
                             initial={{ width: 0 }}
                             animate={{ width: `${((step + 1) / questions.length) * 100}%` }}
@@ -1543,7 +1543,7 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                         <span className="text-xs font-black text-rainbow-indigo">{step + 1}/{questions.length}</span>
                       </div>
                     </div>
-                    <h2 className="text-2xl md:text-5xl font-black text-slate-900 mb-8 md:mb-12 leading-[1.2] md:leading-[1.1] tracking-tight md:tracking-tighter">{questions[step].q}</h2>
+                    <h2 className="text-2xl md:text-5xl font-black text-white mb-8 md:mb-12 leading-[1.2] md:leading-[1.1] tracking-tight md:tracking-tighter">{questions[step].q}</h2>
                   </motion.div>
                 </AnimatePresence>
                 <div className="grid gap-4">
@@ -1592,16 +1592,16 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                     className="absolute inset-0 rounded-[2.5rem] border-4 border-emerald-400"
                   />
                 </motion.div>
-                <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-6 md:mb-8 tracking-tight md:tracking-tighter leading-tight">
+                <h2 className="text-3xl md:text-6xl font-black text-white mb-6 md:mb-8 tracking-tight md:tracking-tighter leading-tight">
                   Tudo <span className="text-gradient-rainbow">Pronto!</span>
                 </h2>
                 
-                <div className="mb-10 p-8 bg-rainbow-blue/5 rounded-3xl border-2 border-rainbow-blue/20 inline-block">
-                  <p className="text-slate-500 font-bold uppercase tracking-widest text-sm mb-2">Valor da Consulta Presencial</p>
+                <div className="mb-10 p-8 bg-rainbow-blue/20 rounded-3xl border-2 border-rainbow-blue/40 inline-block">
+                  <p className="text-slate-300 font-bold uppercase tracking-widest text-sm mb-2">Valor da Consulta Presencial</p>
                   <div className="text-4xl md:text-6xl font-black text-rainbow-blue">R$ 150,00</div>
                 </div>
 
-                <p className="text-lg md:text-2xl text-slate-600 mb-10 md:mb-12 font-medium leading-relaxed max-w-2xl mx-auto">
+                <p className="text-lg md:text-2xl text-slate-300 mb-10 md:mb-12 font-medium leading-relaxed max-w-2xl mx-auto">
                   Sua triagem foi processada. Agora, clique no botão para enviar os dados e agendar sua consulta.
                 </p>
                 <motion.button
