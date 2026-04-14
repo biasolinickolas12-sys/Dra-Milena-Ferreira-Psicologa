@@ -1357,6 +1357,10 @@ const Quiz = () => {
     {
       q: "Já recebeu indicação para Terapia Comportamental (ABA)?",
       options: ["Sim, por médico/especialista", "Não, estou buscando por conta própria", "Ainda não sei o que é ABA"]
+    },
+    {
+      q: "Qual o melhor período para realizar a consulta?",
+      options: ["Manhã", "Tarde", "Noite", "Sábado (sob consulta)"]
     }
   ];
 
@@ -1390,6 +1394,7 @@ const Quiz = () => {
 📌 *Diagnóstico:* ${answers[2]}
 📌 *Demanda:* ${answers[3]}
 📌 *Indicação ABA:* ${answers[4]}
+📌 *Período Preferencial:* ${answers[5]}
 
 Aguardo seu retorno para prosseguirmos com o atendimento.`;
 
@@ -1426,10 +1431,10 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
           viewport={{ once: true }}
           className="relative group"
         >
-          {/* Rainbow Border Glow */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet rounded-[3.2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-tilt" />
+          {/* Rainbow Border Glow - Enhanced */}
+          <div className="absolute -inset-1.5 bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet rounded-[3.2rem] blur-xl opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse" />
           
-          <div className="bg-white/90 backdrop-blur-xl rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-20 relative overflow-hidden shadow-2xl border border-white/50 min-h-[500px] flex flex-col justify-center">
+          <div className="bg-white/95 backdrop-blur-2xl rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-20 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-white/60 min-h-[550px] flex flex-col justify-center">
             {/* Decorative Corner Shapes */}
             <motion.div 
               animate={{ rotate: 360, scale: [1, 1.2, 1] }}
@@ -1590,8 +1595,14 @@ Aguardo seu retorno para prosseguirmos com o atendimento.`;
                 <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-6 md:mb-8 tracking-tight md:tracking-tighter leading-tight">
                   Tudo <span className="text-gradient-rainbow">Pronto!</span>
                 </h2>
+                
+                <div className="mb-10 p-8 bg-rainbow-blue/5 rounded-3xl border-2 border-rainbow-blue/20 inline-block">
+                  <p className="text-slate-500 font-bold uppercase tracking-widest text-sm mb-2">Valor da Consulta Presencial</p>
+                  <div className="text-4xl md:text-6xl font-black text-rainbow-blue">R$ 150,00</div>
+                </div>
+
                 <p className="text-lg md:text-2xl text-slate-600 mb-10 md:mb-12 font-medium leading-relaxed max-w-2xl mx-auto">
-                  Sua triagem foi processada. Agora, clique no botão para enviar os dados e iniciar seu atendimento personalizado.
+                  Sua triagem foi processada. Agora, clique no botão para enviar os dados e agendar sua consulta.
                 </p>
                 <motion.button
                   onClick={handleWhatsAppRedirect}
